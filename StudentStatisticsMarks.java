@@ -14,8 +14,7 @@ public class StudentStatisticsMarks
     
     public void AssignmentName(){
        // public static void main(String[] args){
-            Scanner scanner = new Scanner(System.in);
-            
+            Scanner scanner = new Scanner(System.in);            
             System.out.print("Please enter the assignment name: ");
             String assignmentName = scanner.nextLine();
             System.out.println("Assignment Name entered is: " + assignmentName);
