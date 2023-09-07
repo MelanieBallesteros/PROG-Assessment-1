@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=StudentStatisticsMarks
+comment1.params=
+comment1.target=void\ AssignmentName()
+comment2.params=
+comment2.target=void\ StudentMarks()
+comment3.params=studentNumber
+comment3.target=int\ getInput(int)
+numComments=4
