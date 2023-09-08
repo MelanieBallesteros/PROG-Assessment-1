@@ -57,11 +57,36 @@ public class StudentMarksAnalyzer
         }
     }
     
-    //Display the entered highest and lowes marks
+    //Calculate the mean
+    int totalMarks = 0;
+    for(int i = 0; i < 30; i++){
+        totalMarks += studentMarks[i];
+    }
+    
+    double mean = (double) totalMarks / studentCount;
+    
+    //Calculate the standard deviation
+    double sumSquaredDifferences = 0;
+    for (int i = 0; i < 30; i++) {
+        double difference = studentMarks[i] - mean;
+        sumSquaredDifferences += difference * difference;
+    }
+    
+    double standardDeviation = Math.sqrt(sumSquaredDifferences / studentCount);
+    
+   // }
+    
+    
+    //Display the entered highest and lowest marks
     System.out.println("Entered highest and lowest mark in " + assignmentName);
     System.out.println("Highest Mark: " + highestMark);
     System.out.println("Lowest Mark: " + lowestMark);
+    //Display the mean and standard Deviation
+    System.out.println("Mean Mark and Standard Deviation in " + assignmentName);
+    System.out.println("Mean Mark: " + mean);
+    System.out.println("Standard Deviation: " + standardDeviation);
     
+    scanner.close();
 }
 }
        
