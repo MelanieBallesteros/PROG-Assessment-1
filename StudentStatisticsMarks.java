@@ -11,8 +11,9 @@ import java.util.Scanner;
 public class StudentStatisticsMarks
 {
       int[]marks = new int[30]; //array to store marks
-      double highestMark = 0;
-      double lowestMark = 30;
+      double[] studentMarks = new double[30];
+      double highestMark = 0;    //Initialize to a low value
+      double lowestMark = 30;    // Initialize to a high value
       //private int mark;
       //int highestMark = marks[0];
       //int lowestMark = marks[0];
@@ -52,8 +53,9 @@ public class StudentStatisticsMarks
         //Input student marks
         public static int getInput(int studentNumber){
             Scanner scanner = new Scanner(System.in);
-            int mark;
+            int mark;            
             
+           // for(int i = 1; i <= 30; i++){
             System.out.print("Enter mark for Student " + studentNumber + " : ");
             mark=scanner.nextInt();
          
@@ -62,11 +64,44 @@ public class StudentStatisticsMarks
                 System.out.println("Invalid mark input! Mark must be between 0 and 30. Please enter a valid mark for Student " + studentNumber + " : ");
                 mark=getInput(studentNumber); // Recurring call the method to re-enter a mark
             }
-            
             return mark;           
-               
+            
+        }
+        
+        public double findHighestMark(){
+            double highestMark = this.studentMarks[0];
+            
+            for (double mark : this.studentMarks){
+            if (mark > highestMark){
+                highestMark = mark;
+            }
+            }
+            return highestMark;
+        }
+        
+        public double findLowestMark(){
+            double lowestMark = this.studentMarks[0];
+            
+            for (double mark : this.studentMarks){
+            if (mark < lowestMark){
+                lowestMark = mark;
+            }
         
         }
+        
+        return lowestMark;
+    }
+}
+        //Print the highest and lowest marks
+        
+        //System.out.println("The highest mark is: " + highestMark);
+      //  System.out.println("The lowest mark is : " + lowestMark);
+        
+      //  scanner.close();
+        
+   // }
+//}
+        
         
         //public int findHighestMark(){
           //  int mark;
@@ -103,7 +138,7 @@ public class StudentStatisticsMarks
     //    }
                  
       
-        }
+      //  }
     
         
     
