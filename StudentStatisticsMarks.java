@@ -14,12 +14,7 @@ public class StudentStatisticsMarks
       double[] studentMarks = new double[30];
       double highestMark = 0;    //Initialize to a low value
       double lowestMark = 30;    // Initialize to a high value
-      //private int mark;
-      //int highestMark = marks[0];
-      //int lowestMark = marks[0];
-      //int[]mark = new int[studMarks];
-    
-     //double[] studentMarks = new double[30];
+     
     
      //Input assignment name
     public void AssignmentName(){
@@ -67,90 +62,7 @@ public class StudentStatisticsMarks
             return mark;           
             
         }
-        
-        public double findHighestMark(){
-            double highestMark = this.studentMarks[0];
-            
-            for (double mark : this.studentMarks){
-            if (mark > highestMark){
-                highestMark = mark;
-            }
-            }
-            return highestMark;
-        }
-        
-        public double findLowestMark(){
-            double lowestMark = this.studentMarks[0];
-            
-            for (double mark : this.studentMarks){
-            if (mark < lowestMark){
-                lowestMark = mark;
-            }
-        
-        }
-        
-        return lowestMark;
     }
-}
-        //Print the highest and lowest marks
-        
-        //System.out.println("The highest mark is: " + highestMark);
-      //  System.out.println("The lowest mark is : " + lowestMark);
-        
-      //  scanner.close();
-        
-   // }
-//}
         
         
-        //public int findHighestMark(){
-          //  int mark;
-            //mark = 0;
-            //int highestMark = Integer.MIN_VALUE;
-                                    
-             
-            //for (int i = 0; i < mark; i++){
-            //if (marks[i] > highestMark) {
-              //  highestMark = marks[i];
-            //}
-        //}
-        //return highestMark;
-    //}
-        
-      //  public int findLowestMark(){
-        //    int mark;
-          //  mark = 0;
-         //   int lowestMark = Integer.MAX_VALUE;
-          //  for (int i = 0; i < mark; i++) {
-          //      if(marks[i] < lowestMark){
-          //          lowestMark = marks[i];
-           //     }
-        //    }
-        //    return lowestMark;
-       // }
-        
-     //   public void printHighestAndLowestMarks(){
-      //      int highest = findHighestMark();
-       //     int lowest = findLowestMark();
-        //    System.out.println("Highest Mark: " + highest);
-        //    System.out.println("Lowest Mark: " + lowest);
-            
-    //    }
-                 
-      
-      //  }
-    
-        
-    
-        
-        
-        
-        
-        
-        
-    
-       
-  
-        
-    
-
+   
