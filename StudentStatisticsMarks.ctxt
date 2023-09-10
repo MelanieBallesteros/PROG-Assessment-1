@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ StudentMarks()
 comment3.params=studentNumber
 comment3.target=int\ getInput(int)
-numComments=4
+comment4.params=marks
+comment4.target=void\ findAndPrintHighestAndLowestMarks(int[])
+numComments=5

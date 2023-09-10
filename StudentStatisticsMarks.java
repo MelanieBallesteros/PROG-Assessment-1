@@ -11,9 +11,6 @@ import java.util.Scanner;
 public class StudentStatisticsMarks
 {
       int[]marks = new int[30]; //array to store marks
-      double[] studentMarks = new double[30];
-      double highestMark = 0;    //Initialize to a low value
-      double lowestMark = 30;    // Initialize to a high value
      
     
      //Input assignment name
@@ -27,8 +24,7 @@ public class StudentStatisticsMarks
         }
  
     
-    public void StudentMarks(){
-       
+    public void StudentMarks(){       
         
         for (int i = 0; i < 30; i++){
             int studentNumber = i +1;
@@ -60,9 +56,40 @@ public class StudentStatisticsMarks
                 mark=getInput(studentNumber); // Recurring call the method to re-enter a mark
             }
             return mark;           
-            
         }
+        
+    
+      
+        
+       // Method to find and print the highest and lowest marks
+    public static void findAndPrintHighestAndLowestMarks(int[] marks) {
+        int highestMark = marks[0];
+        int lowestMark = marks[0];
+
+        for (int i = 1; i < marks.length; i++) {
+            if (marks[i] > highestMark) {
+                highestMark = marks[i];
+            }
+            if (marks[i] < lowestMark) {
+                lowestMark = marks[i];
+            }
+        }
+
+        System.out.println("Highest mark: " + highestMark);
+        System.out.println("Lowest mark: " + lowestMark);
     }
+}
+
+
+
+
+
+
+     
+        
+        
+    
+    
         
         
    
