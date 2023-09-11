@@ -49,6 +49,34 @@ public class StudentStatisticsMarks
          }
         }
         
+     //Method to find the lowest mark
+     
+     public double findLowestMark(){
+         double lowestMark = marks[0];
+         
+         for (double marks : this.marks){
+             if(marks < lowestMark){
+             lowestMark = marks;
+     }
+        
+    }
+    return lowestMark;
+}
+        //Method to find the highest Mark
+        
+     public double findHighestMark(){ 
+          double highestMark = marks[0];
+          
+          for(double marks : this.marks){
+              if(marks > highestMark){
+                  highestMark = marks;
+              }
+             
+          }
+           return highestMark;
+      }
+        
+    
     }
         
         
