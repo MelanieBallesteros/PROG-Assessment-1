@@ -3,19 +3,18 @@
  * Write a description of class StudentStatisticsMarks here.
  *
  * @author (Melanie Ballesteros)
- * @version (a version number or a date)
+ * @version (11 September 2023)
  */
 
 import java.util.Scanner;
 
 public class StudentStatisticsMarks
 {
-      double[]marks = new double[30]; //array to store marks
-      
+    double[]marks = new double[30]; //array to store marks
+     
     
-     //Input assignment name
+     // Input assignment name
     public void AssignmentName(){
-       // public static void main(String[] args){
             Scanner scanner = new Scanner(System.in);            
             System.out.print("Please enter the assignment name: ");
             String assignmentName = scanner.nextLine();
@@ -23,7 +22,7 @@ public class StudentStatisticsMarks
             scanner.close();
         }
     
-    
+    // Input student marks
     public void InputStudentMarks(){
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 30; i++){
@@ -31,26 +30,29 @@ public class StudentStatisticsMarks
             double mark = scanner.nextDouble();
             
                    
-         //Check if the input is a valid mark (between 0 and 30)   
+        //Check if the input is a valid mark (between 0 and 30) else error message and ask to enter valid mark  
         if (mark >= 0 && mark <= 30){
             marks[i] = mark;
-        }else
+        }
+        
+        else
         {
             System.out.println("Invalid mark! Please enter a valid mark between 0 and 30.");
                 i--; // Decrement i to allow the user to re-enter the mark for the same student.
         }
         
     }
-         //Display the entered marks
-         
+        
+          //Display the entered marks         
          System.out.println("Entered marks for students " );
          for (int i = 0; i < 30; i++){
-             System.out.println("Student " + (i +1)+ " :" + marks[i]);
+             System.out.println("Student " + (i +1)+ " : " + marks[i]);
              
          }
         }
-     //Method to display results
-     public void DisplayResults(){
+     
+    //Method to display results
+     public void DisplayHighestLowestMark(){
      
          double lowestMark = findLowestMark();
          double highestMark = findHighestMark();
@@ -58,43 +60,47 @@ public class StudentStatisticsMarks
          System.out.println("Lowest Mark: " + lowestMark);
          System.out.println("Highest Mark: " + highestMark);
          
-         
+      
      
         }
                        
         
-     //Method to find the lowest mark
-     
+     //Method to find the lowest mark     
      public double findLowestMark(){
          double lowestMark = marks[0];
          
          for (double marks : this.marks){
              if(marks < lowestMark){
              lowestMark = marks;
-     }
-        
+             }        
+        }
+        return lowestMark;
     }
-    return lowestMark;
-}
-        //Method to find the highest Mark
-        
+       
+    //Method to find the highest mark        
      public double findHighestMark(){ 
           double highestMark = marks[0];
           
           for(double marks : this.marks){
               if(marks > highestMark){
                   highestMark = marks;
-              }
-             
+              }             
           }
            return highestMark;
-      }
+     }
         
      //Method to calculate the mean and Standard Deviation
-     public void calculateMeanAndStandardDeviation(){
-         //double[]marks = new double[30];              
-         double sum = 0.0;
-         double mean = sum / 30; //Calculate the mean
+     public void calculateMeanAndStandardDeviation(){                   
+         //double sum = 0.0;
+         //Calculate the mean
+         int totalMarks = 0;
+         //double mean = sum / 30; //Calculate the mean
+         for(int i = 0; i < 30; i++){
+             totalMarks += marks[i];
+         }
+         
+         double mean = (double) totalMarks / 30;
+         
          
          //Calculate the sum of squared differences for standard deviation
          double sumOfSquaredDifferences = 0.0;
@@ -110,7 +116,7 @@ public class StudentStatisticsMarks
          //Print the mean standard deviation
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + standardDeviation);
-        }
+     }
     }
     
         
