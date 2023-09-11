@@ -1,7 +1,7 @@
 
 /**
  * Write a description of class StudentStatisticsMarks here.
- *
+ * A simple program to compute statistics of students' marks in an assignment that have functional methods
  * @author (Melanie Ballesteros)
  * @version (11 September 2023)
  */
@@ -30,7 +30,7 @@ public class StudentStatisticsMarks
             double mark = scanner.nextDouble();
             
                    
-        //Check if the input is a valid mark (between 0 and 30) else error message and ask to enter valid mark  
+        //Check if input is a valid mark (between 0 and 30) else error message and ask to enter valid mark  
         if (mark >= 0 && mark <= 30){
             marks[i] = mark;
         }
@@ -51,17 +51,16 @@ public class StudentStatisticsMarks
          }
         }
      
-    //Method to display results
+    //Method to display results of highest and lowest marks
      public void DisplayHighestLowestMark(){
      
          double lowestMark = findLowestMark();
          double highestMark = findHighestMark();
          
-         System.out.println("Lowest Mark: " + lowestMark);
-         System.out.println("Highest Mark: " + highestMark);
+         System.out.println("Lowest Mark is: " + lowestMark);
+         System.out.println("Highest Mark is: " + highestMark);
          
-      
-     
+          
         }
                        
         
@@ -91,10 +90,10 @@ public class StudentStatisticsMarks
         
      //Method to calculate the mean and Standard Deviation
      public void calculateMeanAndStandardDeviation(){                   
-         //double sum = 0.0;
+        
          //Calculate the mean
          int totalMarks = 0;
-         //double mean = sum / 30; //Calculate the mean
+       
          for(int i = 0; i < 30; i++){
              totalMarks += marks[i];
          }
@@ -113,61 +112,15 @@ public class StudentStatisticsMarks
          //Calculate the standard deviation
          double standardDeviation = Math.sqrt(sumOfSquaredDifferences / 30);
      
-         //Print the mean standard deviation
+         //Print the mean and standard deviation
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + standardDeviation);
      }
+    
     }
     
         
-        
-    
-//    public void StudentMarks(){       
-        
-//        for (int i = 0; i < 30; i++){
-//            int studentNumber = i +1;
-//            int mark = getInput(studentNumber);
-//            marks[i] = mark;
-//        }
-        
-        
-        //Display the entered marks
-//        System.out.println("Entered marks for 30 students ");  
-//        for (int i = 0; i<30; i++){
-//            int studentNumber = i + 1;
-//            int mark = marks[i];
-//            System.out.println("Student " + studentNumber + " : " + mark);
-//          }
-                   
-          
-//        }
-        
-        
-        //Input student marks
-//        public static int getInput(int studentNumber){
-//            Scanner scanner = new Scanner(System.in);
-//            int mark;            
-            
-           // for(int i = 1; i <= 30; i++){
-//            System.out.print("Enter mark for Student " + studentNumber + " : ");
-//            mark=scanner.nextInt();
-         
-            //Display error message when invalid mark entered
-//            if(mark < 0 || mark > 30){
-//                System.out.println("Invalid mark input! Mark must be between 0 and 30. Please enter a valid mark for Student " + studentNumber + " : ");
-//                mark=getInput(studentNumber); // Recurring call the method to re-enter a mark
-//            }
-//            return mark;           
-//        }
-        //Method to find the lowest price
-        
-//        public double
-        
-        
-        
-        
-//    }
-      
+
         
       
 

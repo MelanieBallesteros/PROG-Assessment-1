@@ -1,6 +1,6 @@
 #BlueJ package file
 editor.fx.0.height=663
-editor.fx.0.width=1391
+editor.fx.0.width=1334
 editor.fx.0.x=3
 editor.fx.0.y=107
 objectbench.height=67
@@ -28,7 +28,7 @@ target1.name=StudentMarksAnalyzer
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=170
-target1.x=300
+target1.x=400
 target1.y=10
 target2.height=70
 target2.name=StudentStatisticsMarks
