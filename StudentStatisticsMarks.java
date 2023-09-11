@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class StudentStatisticsMarks
 {
       double[]marks = new double[30]; //array to store marks
-     
+      
     
      //Input assignment name
     public void AssignmentName(){
@@ -29,7 +29,8 @@ public class StudentStatisticsMarks
         for (int i = 0; i < 30; i++){
             System.out.print("Enter mark for Student " + (i + 1) + " : ");
             double mark = scanner.nextDouble();
-        
+            
+                   
          //Check if the input is a valid mark (between 0 and 30)   
         if (mark >= 0 && mark <= 30){
             marks[i] = mark;
@@ -48,6 +49,19 @@ public class StudentStatisticsMarks
              
          }
         }
+     //Method to display results
+     public void DisplayResults(){
+     
+         double lowestMark = findLowestMark();
+         double highestMark = findHighestMark();
+         
+         System.out.println("Lowest Mark: " + lowestMark);
+         System.out.println("Highest Mark: " + highestMark);
+         
+         
+     
+        }
+                       
         
      //Method to find the lowest mark
      
@@ -76,8 +90,29 @@ public class StudentStatisticsMarks
            return highestMark;
       }
         
-    
+     //Method to calculate the mean and Standard Deviation
+     public void calculateMeanAndStandardDeviation(){
+         //double[]marks = new double[30];              
+         double sum = 0.0;
+         double mean = sum / 30; //Calculate the mean
+         
+         //Calculate the sum of squared differences for standard deviation
+         double sumOfSquaredDifferences = 0.0;
+         for(int i = 0; i < 30; i++){
+             double difference = marks[i] - mean;
+             sumOfSquaredDifferences +=difference * difference;
+             
+         }
+         
+         //Calculate the standard deviation
+         double standardDeviation = Math.sqrt(sumOfSquaredDifferences / 30);
+     
+         //Print the mean standard deviation
+        System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+        }
     }
+    
         
         
     
